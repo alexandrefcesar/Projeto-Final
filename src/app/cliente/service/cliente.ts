@@ -1,5 +1,5 @@
 export class Cliente {
-  codigo: number;
+  codigo: string;
   nome: string = "";
   endereco: string;
   cidade: string;

@@ -2,28 +2,28 @@
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">Produto</h5>
-      <!--Linha formulario-->
+      <!--Formulario de pesquisa-->
       <div class="row">
         <div class="form-group col-12">
           <label for="nome" class="control-label">Nome do Produto:</label>
           <input type="text" class="form-control" placeholder="Digite o nome do produto" [(ngModel)]="produto.nome" />
         </div>
       </div>
-      <!--Linha botao pesquisar-->
+      <!--Botões para operações-->
       <div class="row" style="margin-bottom: 20px;">
         <div class="col-12">
-          <button type="button" class="btn btn-primary" style="margin-right: 10px;"
-            (click)="pesquisarProduto()">Pesquisar Produto</button>
-          <button type="button" class="btn btn-primary" style="margin-right: 10px;" (click)="incluirProduto()">Novo
-            Produto</button>
-          <button type="button" class="btn btn-primary" style="margin-right: 10px;" (click)="alterarProduto()">Alterar
-            Produto</button>
-          <button type="button" class="btn btn-primary" style="margin-right: 10px;" (click)="removerProduto()">Excluir
-            Produto</button>
+          <button type="button" class="btn btn-primary"
+          style="margin-right: 10px;" (click)="pesquisarProduto()">Pesquisar Produto</button>
+          <button type="button" class="btn btn-primary"
+          style="margin-right: 10px;" (click)="incluirProduto()">Novo Produto</button>
+          <button type="button" class="btn btn-primary"
+          style="margin-right: 10px;" (click)="alterarProduto()">Alterar Produto</button>
+          <button type="button" class="btn btn-primary"
+          style="margin-right: 10px;" (click)="removerProduto()">Excluir Produto</button>
         </div>
       </div>
 
-      <!--Linha tabela-->
+      <!--Impressão da tabela-->
       <div class="row">
         <div class="col-lg-12">
           <table class="table">
@@ -40,9 +40,9 @@
             <tbody>
               <tr *ngFor="let produto of listaDeProdutos">
                 <th><input type="radio" name="selecionado" (change)="selecionar(produto)" /></th>
-                <th>{{produto.codigo}}</th>
+                <td>{{produto.codigo}}</td>
                 <td>{{produto.nome}}</td>
-                <th>{{produto.descricao}}</th>
+                <td>{{produto.descricao}}</td>
                 <td>{{produto.valor}}</td>
                 <td>{{produto.observacao}}</td>
               </tr>
@@ -50,8 +50,6 @@
           </table>
         </div>
       </div>
-
-
 
     </div>
   </div>

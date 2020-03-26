@@ -5,6 +5,8 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { ProdutoComponent } from "./produto/produto.component";
 import { ProdutomanterComponent } from "./produto/produtomanter/produtomanter.component";
+import { VendaComponent } from "./venda/venda.component";
+import { VendamanterComponent } from "./venda/vendamanter/vendamanter.component";
 
 const routes: Routes = [
   {
@@ -42,7 +44,21 @@ const routes: Routes = [
     component: ProdutomanterComponent,
     pathMatch: "full"
   },
-
+  {
+    path: "venda",
+    component: VendaComponent,
+    pathMatch: "full"
+  },
+  {
+    path: "venda/incluir",
+    component: VendamanterComponent,
+    pathMatch: "full"
+  },
+  {
+    path: "venda/alterar/:id",
+    component: VendamanterComponent,
+    pathMatch: "full"
+  }
 ];
 
 @NgModule({

@@ -1,0 +1,54 @@
+<app-layout>
+
+  <!-- https://getbootstrap.com/docs/4.4/components/card/ -->
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Venda</h5>
+      <div class="row">
+        <div class="form-group col-lg-12">
+          <label for="aluno" class="control-label">Cliente:</label>
+
+          <select [(ngModel)]="venda.cliente" class="form-control">
+            <option [ngValue]="null">Selecione</option>
+            <option *ngFor="let cliente of listaDeClientes" [ngValue]="cliente">{{cliente.nome}}</option>
+          </select>
+
+        </div>
+      </div>
+      <div class="row" style="margin-bottom: 20px;">
+        <div class="col-lg-12">
+          <button type="button" class="btn btn-primary" style="margin-right: 10px;" (click)="pesquisarVenda()">Pesquisar Cliente</button>
+          <button type="button" class="btn btn-primary" style="margin-right: 10px;" (click)="incluirVenda()">Nova
+            venda</button>
+          <button type="button" class="btn btn-primary" style="margin-right: 10px;" (click)="removerVenda()">Excluir
+            venda</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Codigo</th>
+                <th>Nome</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let venda of listaDeVendas">
+                <th><input type="radio" name="selecionado" (change)="selecionar(venda)" /></th>
+                <th>{{venda.codigo}}</th>
+                <td>{{venda.cliente.nome}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+</app-layout>

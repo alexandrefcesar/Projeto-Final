@@ -13,6 +13,8 @@ var router_1 = require("@angular/router");
 var home_component_1 = require("./home/home.component");
 var produto_component_1 = require("./produto/produto.component");
 var produtomanter_component_1 = require("./produto/produtomanter/produtomanter.component");
+var venda_component_1 = require("./venda/venda.component");
+var vendamanter_component_1 = require("./venda/vendamanter/vendamanter.component");
 var routes = [
     {
         path: "",
@@ -49,6 +51,21 @@ var routes = [
         component: produtomanter_component_1.ProdutomanterComponent,
         pathMatch: "full"
     },
+    {
+        path: "venda",
+        component: venda_component_1.VendaComponent,
+        pathMatch: "full"
+    },
+    {
+        path: "venda/incluir",
+        component: vendamanter_component_1.VendamanterComponent,
+        pathMatch: "full"
+    },
+    {
+        path: "venda/alterar/:id",
+        component: vendamanter_component_1.VendamanterComponent,
+        pathMatch: "full"
+    }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

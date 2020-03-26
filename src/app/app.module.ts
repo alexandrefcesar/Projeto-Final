@@ -10,6 +10,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { ClientemanterComponent } from "./cliente/clientemanter/clientemanter.component";
 import { ProdutoComponent } from './produto/produto.component';
 import { ProdutomanterComponent } from './produto/produtomanter/produtomanter.component';
+import { VendaComponent } from './venda/venda.component';
+import { VendamanterComponent } from './venda/vendamanter/vendamanter.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,9 @@ import { ProdutomanterComponent } from './produto/produtomanter/produtomanter.co
     LayoutComponent,
     ClientemanterComponent,
     ProdutoComponent,
-    ProdutomanterComponent
+    ProdutomanterComponent,
+    VendaComponent,
+    VendamanterComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
