@@ -11,6 +11,8 @@ var cliente_component_1 = require("./cliente/cliente.component");
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var home_component_1 = require("./home/home.component");
+var produto_component_1 = require("./produto/produto.component");
+var produtomanter_component_1 = require("./produto/produtomanter/produtomanter.component");
 var routes = [
     {
         path: "",
@@ -31,7 +33,22 @@ var routes = [
         path: "cliente/alterar/:id",
         component: clientemanter_component_1.ClientemanterComponent,
         pathMatch: "full"
-    }
+    },
+    {
+        path: "produto",
+        component: produto_component_1.ProdutoComponent,
+        pathMatch: "full"
+    },
+    {
+        path: "produto/incluir",
+        component: produtomanter_component_1.ProdutomanterComponent,
+        pathMatch: "full"
+    },
+    {
+        path: "produto/alterar/:id",
+        component: produtomanter_component_1.ProdutomanterComponent,
+        pathMatch: "full"
+    },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

@@ -24,7 +24,6 @@ var ClienteComponent = /** @class */ (function () {
             .consultarClienteService(this.cliente.nome)
             .subscribe(function (data) {
             _this.listaDeCliente = data;
-            console.log(_this.listaDeCliente);
         });
     };
     ClienteComponent.prototype.incluirCliente = function () {

@@ -17,12 +17,12 @@ export class ClienteComponent implements OnInit {
   ngOnInit(): void {
     this.pesquisarCliente();
   }
+
   pesquisarCliente() {
     this.clienteService
       .consultarClienteService(this.cliente.nome)
       .subscribe(data => {
         this.listaDeCliente = <Cliente[]>data;
-        console.log(this.listaDeCliente);
       });
   }
 

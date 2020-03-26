@@ -3,6 +3,8 @@ import { ClienteComponent } from "./cliente/cliente.component";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
+import { ProdutoComponent } from "./produto/produto.component";
+import { ProdutomanterComponent } from "./produto/produtomanter/produtomanter.component";
 
 const routes: Routes = [
   {
@@ -24,7 +26,23 @@ const routes: Routes = [
     path: "cliente/alterar/:id",
     component: ClientemanterComponent,
     pathMatch: "full"
-  }
+  },
+  {
+    path: "produto",
+    component: ProdutoComponent,
+    pathMatch: "full"
+  },
+  {
+    path: "produto/incluir",
+    component: ProdutomanterComponent,
+    pathMatch: "full"
+  },
+  {
+    path: "produto/alterar/:id",
+    component: ProdutomanterComponent,
+    pathMatch: "full"
+  },
+
 ];
 
 @NgModule({

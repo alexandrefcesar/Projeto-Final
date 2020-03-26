@@ -8,13 +8,17 @@ import { LayoutComponent } from "./layout/layout.component";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { ClientemanterComponent } from "./cliente/clientemanter/clientemanter.component";
+import { ProdutoComponent } from './produto/produto.component';
+import { ProdutomanterComponent } from './produto/produtomanter/produtomanter.component';
 @NgModule({
   declarations: [
     AppComponent,
     ClienteComponent,
     HomeComponent,
     LayoutComponent,
-    ClientemanterComponent
+    ClientemanterComponent,
+    ProdutoComponent,
+    ProdutomanterComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
