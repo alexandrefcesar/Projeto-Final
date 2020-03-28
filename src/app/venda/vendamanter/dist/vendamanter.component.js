@@ -9,6 +9,7 @@ exports.__esModule = true;
 var core_1 = require("@angular/core");
 var venda_1 = require("../service/venda");
 var vendaproduto_1 = require("../service/vendaproduto");
+var produto_1 = require("../../produto/service/produto");
 var VendamanterComponent = /** @class */ (function () {
     function VendamanterComponent(router, vendaService, produtoService, clienteService) {
         this.router = router;
@@ -16,13 +17,17 @@ var VendamanterComponent = /** @class */ (function () {
         this.produtoService = produtoService;
         this.clienteService = clienteService;
         this.operacao = "Incluir";
+        this.nomeProduto = "";
+        this.nomeVenda = "";
         this.venda = new venda_1.Venda();
+        this.produto = new produto_1.Produto();
         this.vendaProduto = new vendaproduto_1.VendaProduto();
         this.listaDeProdutos = [];
         this.listaDeClientes = [];
     }
     VendamanterComponent.prototype.ngOnInit = function () {
         var _this = this;
+        // consultas
         this.clienteService.consultarClienteService("").subscribe(function (data) {
             _this.listaDeClientes = data;
         });

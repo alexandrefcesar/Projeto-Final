@@ -4,9 +4,10 @@
       <h5 class="card-title">Venda - {{operacao}}</h5>
       <div class="row">
         <div class="form-group col-lg-6">
-          <label for="datadevenda" class="control-label">Codigo de venda:</label>
-          <input type="datetime" class="form-control" [(ngModel)]="venda.codigo" />
+          <label for="codigoDeVenda" class="control-label">Codigo de venda:</label>
+          <input type="number" class="form-control"  placeholder="Digite o código da venda" [(ngModel)]="venda.codigo" />
         </div>
+
         <div class="form-group col-lg-12">
           <label for="cliente" class="control-label">Nome do Cliente:</label>
 
@@ -17,7 +18,7 @@
 
         </div>
         <div class="form-group col-lg-6">
-          <label for="datadevenda" class="control-label">Data de venda:</label>
+          <label for="dataDeVenda" class="control-label">Data de venda:</label>
           <input type="date" class="form-control" [(ngModel)]="venda.data" />
         </div>
       </div>
@@ -27,7 +28,7 @@
           <h5 class="card-title">Adicionar Produto</h5>
           <div class="row">
             <div class="form-group col-lg-6">
-              <label for="aluno" class="control-label">Produto:</label>
+              <label for="produto" class="control-label">Produto:</label>
               <select [(ngModel)]="vendaProduto.produto" class="form-control">
                 <option [ngValue]="null">Selecione</option>
                 <option *ngFor="let produto of listaDeProdutos" [ngValue]="produto">{{produto.nome}}</option>
@@ -36,7 +37,7 @@
 
             <div class="form-group col-lg-6">
               <label for="quantidade" class="control-label">Quantidade:</label>
-              <input type="text" class="form-control" [(ngModel)]="vendaProduto.quantidade" />
+              <input type="number" class="form-control" placeholder="Digite a quantidade de produtos" [(ngModel)]="vendaProduto.quantidade" />
             </div>
 
 
@@ -44,7 +45,7 @@
 
           <div class="row" style="margin-bottom: 20px;">
             <div class="col-lg-12">
-              <button *ngIf="this.operacao=='Incluir'" type="button" class="btn btn-primary" style="margin-right: 10px;"
+              <button  type="button" class="btn btn-primary" style="margin-right: 10px;"
                 (click)="adicionarProduto()">Adicionar Produto</button>
             </div>
           </div>
@@ -77,7 +78,7 @@
 
       <div class="row" style="margin-bottom: 20px; margin-top: 20px;">
         <div class="col-lg-12">
-          <button *ngIf="this.operacao=='Incluir'" type="button" class="btn btn-primary" style="margin-right: 10px;"
+          <button type="button" class="btn btn-primary" style="margin-right: 10px;"
             (click)="incluirVenda()">Cadastrar</button>
           <button type="button" class="btn btn-primary" style="margin-right: 10px;"
             (click)="voltarTela()">Voltar</button>

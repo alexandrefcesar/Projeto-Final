@@ -7,9 +7,9 @@
           <label for="nome" class="control-label" >Nome do Produto:</label>
           <input type="text" class="form-control" [(ngModel)]="produto.nome" placeholder="Digite o nome do produto"/>
           <label for="nome" class="control-label" >Descrição do Produto:</label>
-          <input type="text" class="form-control" [(ngModel)]="produto.descricao" placeholder="Digite a descrição do produto" />
+          <input type="text" class="form-control"  [(ngModel)]="produto.descricao" placeholder="Digite a descrição do produto" />
           <label for="nome" class="control-label">Valor do Produto:</label>
-          <input type="text" class="form-control" [(ngModel)]="produto.valor" placeholder="Digite o valor do produto"/>
+          <input type="number" class="form-control" [(ngModel)]="produto.valor" placeholder="Digite o valor do produto (campo para números)"/>
           <label for="nome" class="control-label">Observação do Produto:</label>
           <input type="text" class="form-control" [(ngModel)]="produto.observacao" placeholder="Digite a observação do produto" />
         </div>

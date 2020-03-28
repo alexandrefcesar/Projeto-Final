@@ -6,6 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
+var vendaproduto_1 = require("./service/vendaproduto");
 var core_1 = require("@angular/core");
 var venda_1 = require("./service/venda");
 var VendaComponent = /** @class */ (function () {
@@ -14,6 +15,7 @@ var VendaComponent = /** @class */ (function () {
         this.vendaService = vendaService;
         this.clienteService = clienteService;
         this.venda = new venda_1.Venda();
+        this.vendaProduto = new vendaproduto_1.VendaProduto();
         this.listaDeVendas = [];
         this.listaDeClientes = [];
     }
@@ -29,6 +31,8 @@ var VendaComponent = /** @class */ (function () {
         }
         this.vendaService.consultarVendaService(codigoDoCliente).subscribe(function (data) {
             _this.listaDeVendas = data;
+        }, function (error) {
+            _this.erro = error;
         });
     };
     VendaComponent.prototype.pesquisarCliente = function () {
