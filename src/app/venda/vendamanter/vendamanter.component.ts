@@ -46,8 +46,10 @@ export class VendamanterComponent implements OnInit {
 
   incluirVenda() {
     this.vendaService.incluirVendaService(this.venda).subscribe(data => {
+      //console.log(JSON.stringify(this.venda));
       alert(data["mensagem"]);
       this.router.navigate(["/venda"]);
+
     });
   }
 

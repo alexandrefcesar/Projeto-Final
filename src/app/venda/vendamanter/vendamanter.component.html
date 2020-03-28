@@ -28,6 +28,10 @@
           <h5 class="card-title">Adicionar Produto</h5>
           <div class="row">
             <div class="form-group col-lg-6">
+              <label for="quantidade" class="control-label">Código:</label>
+              <input type="number" class="form-control" placeholder="Digite o código" [(ngModel)]="vendaProduto.codigo" />
+            </div>
+            <div class="form-group col-lg-6">
               <label for="produto" class="control-label">Produto:</label>
               <select [(ngModel)]="vendaProduto.produto" class="form-control">
                 <option [ngValue]="null">Selecione</option>
@@ -55,16 +59,20 @@
               <table class="table">
                 <thead>
                   <tr>
+                    <th>Código</th>
                     <th>Produto</th>
                     <th>Quantidade</th>
+                    <th>Valor (1 unidade)</th>
                     <th>Remover</th>
                     <th></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let vendaProduto of venda.listaVentaItem">
+                    <th>{{vendaProduto.codigo}}</th>
                     <th>{{vendaProduto.produto.nome}}</th>
                     <td>{{vendaProduto.quantidade }}</td>
+                    <td>{{vendaProduto.produto.valor }}</td>
                     <th><a style="cursor: pointer;" (click)="removerVenda(vendaProduto)">X</a></th>
                   </tr>
                 </tbody>

@@ -41,6 +41,7 @@ var VendamanterComponent = /** @class */ (function () {
     VendamanterComponent.prototype.incluirVenda = function () {
         var _this = this;
         this.vendaService.incluirVendaService(this.venda).subscribe(function (data) {
+            //console.log(JSON.stringify(this.venda));
             alert(data["mensagem"]);
             _this.router.navigate(["/venda"]);
         });
